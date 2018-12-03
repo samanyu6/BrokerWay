@@ -1,0 +1,55 @@
+{%extends "layout.html"%}
+{%block content%}
+  <div>
+
+        <table class="table table-hover">
+          <thead class="thead-dark">
+            <tr>
+              <th class="column1">apt_id</th>
+              <th class="column2">bid</th>
+              <th class="column3">apt_detail_code</th>
+              <th class="column4">door_no</th>
+              <th class="column5">owner_per_id</th>
+              <th class="column6">price</th>
+              <th class="column7">status</th>
+              <th class="column8">image-link</th>
+            </tr>
+          </thead>
+          <tbody>
+              {%for items in data %}
+              <tr>
+
+                <td class="column1">{{ items[0] }}</td>
+                <td class="column2">{{ items[1] }}</td>
+                <td class="column3">{{ items[2] }}</td>
+                <td class="column4">{{ items[3] }}</td>
+                <td class="column5">{{ items[4] }}</td>
+                <td class="column6">{{ items[5] }}</td>
+                <td class="column7">{{ items[6] }}</td>
+                <td class="column8">{{ items[7] }}</td>
+
+              </tr>
+              {% endfor %}
+          </tbody>
+        </table>
+
+        <div class="newsletter-right">
+          <form id="mc-form2" class="mailing-list cf" method = "post">
+            <input id="mc-email2" type="text" value="" name="apt_id" style = "padding-right:20px" style = "padding-left:20px"placeholder="apt_id">
+            <input id="mc-email2" type="text" value="" name="bid" placeholder="bid" style = "padding-right:20px" style = "padding-left:20px">
+            <input id="mc-email2" type="text" value="" name="apt_detail_code" placeholder="apt_detail_code" style = "padding-right:20px" style = "padding-left:20px">
+            <input id="mc-email2" type="text" value="" name="door_no" placeholder="door_no" style = "padding-right:20px" style = "padding-left:20px">
+            <input id="mc-email2" type="text" value="" name="owner_id" placeholder="owner_per_id" style = "padding-right:20px" style = "padding-left:20px">
+            <input id="mc-email2" type="text" value="" name="price" placeholder="price" style = "padding-right:20px" style = "padding-left:20px">
+            <input id="mc-email2" type="text" value="" name="image" placeholder="image-link" style = "padding-right:20px" style = "padding-left:20px">
+            <div class="container" style="padding-top: 50px" >
+               <button type="submit" id="insert" class="btn btn-secondary"  >Insert values</button>
+            </div>
+          </form>
+      <div class="container" style="padding-top: 20px" >
+
+         <button type="button" onclick="window.location.href='/'"class="btn btn-secondary"  >Logout</button>
+       </div
+    </div>
+
+  {%endblock%}
