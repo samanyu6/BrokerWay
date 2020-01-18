@@ -9,7 +9,7 @@ app.secret_key = 'my unobvious secret key'
 mysql = MySQL()
 
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = '9182736455'
+app.config['MYSQL_PASSWORD'] = ''
 app.config['MYSQL_DB'] = 'housing'
 app.config['MYSQL_HOST'] = 'localhost'
 mysql = MySQL(app)
